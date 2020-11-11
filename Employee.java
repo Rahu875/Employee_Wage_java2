@@ -1,11 +1,39 @@
-public class Employee {
-public static void main(String[] args) {
-int IS_FULL_TIME =1;
-double empCheck = Math.floor(Math.random() * 10) %2;
-if (empCheck == IS_FULL_TIME)
-	System.out.println("Employee is Present");
-else
-	System.out.println("Employee is Abscent");
+import java.util.Scanner;
+ 
+class Employee
+{
+    int age;
+    String name, address, gender;
+    Scanner get = new Scanner(System.in);
+    Employee()
+    {
+        System.out.println("Enter Name of the Employee:");
+        name = get.nextLine();
+        System.out.println("Enter Gender of the Employee:");
+        gender = get.nextLine();
+        System.out.println("Enter Address of the Employee:");
+        address = get.nextLine();
+        System.out.println("Enter Age:");
+        age = get.nextInt();
+    }
+ 
+    void display()
+    {
+        System.out.println("Employee Name: "+name);
+        System.out.println("Age: "+age);
+        System.out.println("Gender: "+gender);
+        System.out.println("Address: "+address);
+    }
 }
-}
-
+ 
+class fullTimeEmployees extends Employee
+{
+    float salary;
+    int des;
+    fullTimeEmployee()
+    {
+        System.out.println("Enter Designation:");
+        des = get.nextInt();
+        System.out.println("Enter Salary:");
+        salary = get.nextFloat();
+    }
