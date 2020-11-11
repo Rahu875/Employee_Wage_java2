@@ -67,3 +67,16 @@ class partTimeEmployees extends Employee
         System.out.println("Salary for "+workinghrs+" working hours is: $"+rate);
     }
 }
+class Employees
+{
+    public static void main(String args[])
+    {
+        System.out.println("================================"+"\n"+"Enter Full Time Employee Details"+"\n"+"================================"+"\n");
+        fullTimeEmployees ob1 = new fullTimeEmployees();
+        partTimeEmployees ob = new partTimeEmployees();
+        System.out.println("================================"+"\n"+"Enter Part Time Employee Details"+"\n"+"================================"+"\n");
+        ob1.display();
+        ob.calculatepay();
+        ob.display();
+    }
+}
